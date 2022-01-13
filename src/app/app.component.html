@@ -3,5 +3,33 @@
   Start editing to see some magic happen :)
 </p>
 <p intentoColor="yellow" defaultColor="red">Helado</p>
-<button>Touch me baby</button>
+<p>Heroes:</p>
+<div class="container">
+  <div>
+    <ul>
+      <li
+        *ngFor="let animal of zoo"
+        intentoColor="white"
+        defaultColor="{{ animal.colorsito }}"
+      >
+        <span>{{ animal.name + '  ' }}</span>
+        <span>{{ animal.numerito }}</span>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<ul>
+  <li *ngIf="animalFav.numerito != 0">
+    <span>{{ animalFav.name + '  ' }}</span>
+    <span>{{ animalFav.numerito }}</span>
+  </li>
+</ul>
+
+<button (click)="intentoMetodo()">Touch me baby</button>
+
+<button (click)="animalRandom()">Animaloco escapando in comming</button>
+
+<input #serius placeholder="phone number" />
+<button (click)="intentoMetodo1(serius.value)">Eh?</button>
 <happyComp> </happyComp>
