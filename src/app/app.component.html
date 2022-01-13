@@ -30,7 +30,28 @@
 
 <button (click)="animalRandom()">Animaloco escapando in comming</button>
 
-<input #serius placeholder="phone number" />
+<input #serius placeholder="pon esa cosa horrorosa aqui o veras" type="text" />
 <button (click)="intentoMetodo1(serius.value)">Eh?</button>
+
+<form action="">
+  <textarea
+    name="Calorta"
+    id=""
+    cols="30"
+    rows="10"
+    #ranText
+    spellcheck="false"
+  ></textarea>
+  <input
+    type="submit"
+    value="Pepitox"
+    (click)="seleccionLinea(ranText.value)"
+  />
+  <input type="submit" value="Reset" (click)="resetMagic()" />
+</form>
+
+<p *ngIf="numberMagic >= 0">
+  {{ arrayParceado[numberMagic] }}
+</p>
 
 <happyComp> </happyComp>

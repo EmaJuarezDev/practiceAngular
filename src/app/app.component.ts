@@ -32,4 +32,17 @@ export class AppComponent {
   }
 
   animalFav = this.zoo[2];
+
+  numberMagic: number = -1;
+
+  arrayParceado: string[];
+
+  seleccionLinea(lineas: string) {
+    this.arrayParceado = lineas.split('\n');
+    this.numberMagic = Math.trunc(Math.random() * this.arrayParceado.length);
+  }
+
+  resetMagic() {
+    this.numberMagic = -1;
+  }
 }
